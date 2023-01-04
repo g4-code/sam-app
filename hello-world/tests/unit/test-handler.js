@@ -16,7 +16,7 @@ describe('Tests index', function () {
         let response = JSON.parse(result.body);
 
         expect(response).to.be.an('object');
-        expect(response.message).to.be.equal("hello SAM");
+        expect(response.message).to.be.equal("hello SAM pipeline");
         // expect(response.location).to.be.an("string");
     });
 });
