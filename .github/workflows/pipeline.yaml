@@ -116,7 +116,11 @@ jobs:
       - uses: aws-actions/setup-sam@v1
 
       - name: Build resources
+        uses: aws-actions/setup-sam@v1
+          with:
+            version: 1.59.0
         run: sam build --template ${SAM_TEMPLATE} --use-container
+
 
       - name: Assume the testing pipeline user role
         uses: aws-actions/configure-aws-credentials@v1
